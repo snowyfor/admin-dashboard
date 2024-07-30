@@ -1,0 +1,349 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif, system-ui;
+    font-weight: 700;
+
+    display: grid;
+    grid-template: 1fr 3fr / 1fr 5fr;
+}
+.header {
+    height: 135px;
+    background-color: #fff;
+    grid-row: 1;
+
+    display: grid;
+    grid-template: 1fr 1fr / 5fr 0.3fr 2fr
+}
+.sidebar {
+    background-color: #1c94d3;
+    grid-row: 1 / -1;
+    grid-column: 1 / 2;
+
+    padding: 10px;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    gap: 40px;
+}
+.main-content {
+    background-color: #ececf4;
+}
+
+.title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #fff;
+    font-size: 18px;
+    
+    height: 45px;
+}
+.navigation {
+    width: 100%; 
+    color: #fff;
+    font-size: 16px;
+
+    list-style: none;
+    padding: 0 0 0 10px;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.navigation > li > a {
+    text-decoration: none;
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.navigation > li > a > svg,
+.navigation > li > a > p {
+    padding: 0;
+    margin: 0;
+}
+.branding {
+    width: 100%; 
+    color: #fff;
+    font-size: 16px;
+
+    list-style: none;
+    padding: 0 0 0 10px;
+    margin: 20px 0 0 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.branding > li > a {
+    text-decoration: none;
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.branding > li > a > svg,
+.branding > li > a > p {
+    padding: 0;
+    margin: 0;
+}
+
+.search-bar {
+    grid-row: 1;
+    grid-column: 1;
+}
+.user-info1 {
+    grid-row: 1;
+    grid-column: 3;
+}
+.user-info2 {
+    grid-row: 2;
+}
+.buttons {
+    grid-row: 2;
+    grid-column: 2 / -1;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+}
+#search {
+    width: 90%;
+    height: 27px;
+    border-radius: 15px;
+    background-color: #ececf4;
+    border: none;
+    padding: 0 10px;
+}
+#search:focus,
+#search:active {
+    outline: none;
+    border: 2px solid #1c94d3;
+}
+.searchBtn {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.user-info1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 5px 20px 5px 5px;
+}
+.notificationBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.user-info1 > img {
+    width: 37px;
+    height: 37px;
+}
+.user-info1 > p {
+    font-size: 15px;
+}
+
+/* this project by snowyfor */
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding-right: 20px;
+}
+.buttons > button {
+    width: 80px;
+    height: 35px;
+    background-color: #1c94d3;
+    color: #fff;
+    border-radius: 15px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+
+    font-family: "Roboto", sans-serif, system-ui;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.user-info2 {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 9fr;
+    padding-left: 30px;
+}
+.user-info2 > img {
+    width: 60px;
+    height: 60px;
+    align-self: center;
+
+    grid-row: 1 / -1;
+    grid-column: 1;
+}
+.user-info2 > p {
+    padding: 0;
+    margin: 0;
+}
+.user-info2 > p:first-of-type {
+    font-size: 12px;
+    padding-top: 15px;
+}
+.user-info2 > p:last-of-type {
+    font-size: 19px;
+}
+
+.main-content {
+    height: 675px;
+    display: grid;
+    grid-template: 4fr 3.5fr / 6fr 2fr;
+    padding: 20px 20px 20px 17px;
+    column-gap: 20px;
+    row-gap: 25px;
+}
+.project {
+    grid-row: 1 / -1;
+    grid-column: 1;
+    display: grid;
+    grid-template: auto 1fr / 1fr;
+    row-gap: 10px;
+}
+.project > div {
+    font-size: 18px;
+}
+.card-container {
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    gap: 15px;
+}
+.card {
+    border-radius: 5px;
+    border-left: 7px solid #fbcb48;
+    background-color: #fff;
+
+    padding: 25px 15px 15px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.desc-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.card-title, .card-desc {
+    margin: 0;
+}
+.card-title {
+    font-size: 16px;
+}
+.card-desc {
+    font-size: 14px;
+    font-weight: normal;
+    color: gray;
+}
+.icons {
+    display: flex;
+    justify-content: flex-end;
+}
+.icons > button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.announcement {
+    grid-row: 1;
+    grid-column: 2;
+    display: grid;
+    grid-template: auto 1fr / 1fr;
+    row-gap: 10px;
+}
+.announcement > div {
+    font-size: 18px;
+}
+.announ-container {
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 15px 25px 25px 25px;
+
+    display: flex;
+    flex-direction: column;
+}
+.announ1, .announ2, .announ3 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 10px;
+}
+.announ1, .announ2 {
+    border-bottom: 1px solid lightgray;
+}
+.announ-title, .announ-desc {
+    margin: 0;
+}
+.announ-title {
+    font-size: 14px;
+}
+.announ-desc {
+    font-size: 12px;
+    font-weight: normal;
+    color: gray;
+}
+
+.trending {
+    display: grid;
+    grid-template: auto 1fr / 1fr;
+    row-gap: 10px;
+}
+.trending-container {
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 15px 25px 25px 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.trending-container > div {
+    display: grid;
+    grid-template: repeat(2, 1fr) / auto 5fr;
+    column-gap: 15px;
+}
+.trending-container > div > img {
+    width: 37px;
+    height: 37px;
+
+    grid-row: 1 / -1;
+    grid-column: 1;
+}
+.user-name {
+    grid-row: 1;
+    grid-column: 2;
+    font-weight: 600;
+}
+.user-caption {
+    grid-column: 2;
+    color: gray;
+    font-weight: normal;
+
+}
+.user-name, .user-caption {
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+}
